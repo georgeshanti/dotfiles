@@ -1,0 +1,2 @@
+#Custom linux scripts
+PATH=$PATH:$HOME/linux-scripts

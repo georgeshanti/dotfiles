@@ -1,0 +1,3 @@
+#Prompt directory shortening
+SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
