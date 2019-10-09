@@ -1,11 +1,3 @@
 # dotfiles
 
-Insert this shell script in whichever .*rc file your shell uses.
-
-```
-#Load dotfiles
-for DOTFILE in `find ~/dotfiles/ -name ".*" | grep -v .git`
-do
- [ -f $DOTFILE ] && source $DOTFILE
-done
-```
+Source the .load file wherever you need to and it will take care of the rest
