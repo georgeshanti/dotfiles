@@ -1,0 +1,5 @@
+grn=$'\e[1;32m'
+end=$'\e[0m'
+printf "${grn}%*s\n" "${COLUMNS:-$(tput cols)}" "${end}" | tr ' ' -
+printf "${grn}%*s\n" "${COLUMNS:-$(tput cols)}" "${end}" | tr ' ' -
+printf "${grn}%*s\n" "${COLUMNS:-$(tput cols)}" "${end}" | tr ' ' -

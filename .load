@@ -1,0 +1,8 @@
+# Get path of dotfiles directory
+DOTDIR=$(dirname "$0")
+
+# Load dotfiles
+for DOTFILE in `find ~/dotfiles/ -name ".*" | grep -vwE "(.git|.load)"`
+do
+    [ -f $DOTFILE ] && source $DOTFILE
+done

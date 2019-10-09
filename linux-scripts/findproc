@@ -1,0 +1,1 @@
+ps -a -o uid,pid,cmd | grep "$1"
