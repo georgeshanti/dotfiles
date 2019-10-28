@@ -11,7 +11,11 @@ HISTSIZE=500
 #Show virtual env prompt
 plugins=(virtualenv)
 
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 
 PROMPT_COMMAND="cmdline"
 precmd() { eval "$PROMPT_COMMAND" }
