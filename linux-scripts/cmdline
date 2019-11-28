@@ -1,3 +1,2 @@
-grn=$'\e[1;32m'
-end=$'\e[0m'
+grn='\e[1;32m'
 printf "${grn}%*s\n" "${COLUMNS:-$(tput cols)}" "${end}" | tr ' ' -

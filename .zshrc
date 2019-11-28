@@ -69,5 +69,5 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 #Source zshell
-source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+source ~/zsh-themes/powerlevel10k/powerlevel10k.zsh-theme
 
