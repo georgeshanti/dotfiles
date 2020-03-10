@@ -1,1 +1,1 @@
-ps -eo uid,pid,cmd | grep "$1"
+ps -eo uid,pid,command | grep "$1"
