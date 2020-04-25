@@ -2,7 +2,7 @@
 DOTDIR=$(dirname "$0")
 
 # Load dotfiles
-for DOTFILE in `find ~/dotfiles/ -name ".*" | grep -vwE "(.git|.load)"`
+for DOTFILE in `find ~/dotfiles/ -name ".*" | grep -vwE "(.git|.load|resources)"`
 do
     [ -f $DOTFILE ] && source $DOTFILE
 done

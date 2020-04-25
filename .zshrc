@@ -1,7 +1,3 @@
-#Prompt directory shortening
-SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
-
 #Histroy
 SAVEHIST=1
 setopt HIST_IGNORE_DUPS
@@ -17,13 +13,18 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 
-PROMPT_COMMAND="cmdline"
-precmd() { eval "$PROMPT_COMMAND" }
+# PROMPT_COMMAND="cmdline"
+# precmd() { eval "$PROMPT_COMMAND" }
 
 #Key bindings
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -g -A key
+
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "0D" beginning-of-line
+bindkey "0C" end-of-line
 
 key[Home]="${terminfo[khome]}"
 key[End]="${terminfo[kend]}"
@@ -69,5 +70,5 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 #Source zshell
-source $ZSH_CUSTOM/themes/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/dotfiles/resources/lambda-mod.zsh-theme
 
