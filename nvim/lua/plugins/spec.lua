@@ -1,4 +1,5 @@
 return {
+  { "nvim-neo-tree/neo-tree.nvim", lazy = false },
   { "MunifTanjim/nui.nvim", lazy = false },
   {
     url = "https://github.com/nvim-telescope/telescope.nvim.git",
@@ -97,5 +98,34 @@ return {
       { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" }
     }
   },
-  { "nvim-tree/nvim-tree.lua", lazy = false },
+{
+  "folke/edgy.nvim",
+  event = "VeryLazy",
+  init = function()
+    vim.opt.laststatus = 3
+    vim.opt.splitkeep = "screen"
+  end,
+  opts = {
+    left = {
+      -- Neo-tree filesystem always takes half the screen height
+      {
+        title = "Neo-Tree",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "filesystem"
+        end,
+        size = { height = 0.5 },
+      },
+      {
+        title = "Neo-Tree Buffers",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "buffers"
+        end,
+	size = { height = 0.5 },
+      },
+      "neo-tree",
+    },
+  },
+}
 }
